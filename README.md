@@ -29,7 +29,7 @@ Todas las imagenes de docker empiezan por un DockerFile el cual va a contener to
 
 ## 3. Corriendo una imagen de docker  
 Desde la terminal de comandos, lo inicial es crear una build apartir del Dockerfile que se encuentra en el repositorio. El respositorio contiene lo siguiente:  
-```docker
+```dockerfile
 FROM nginx
 
 COPY /sitio ./usr/share/nginx/html
@@ -58,7 +58,7 @@ docker run -it --rm -d -p 8080:80 --name web sitioweb
 ## 6. Mejorando el docker file  
 Esta vez usaremos como plantilla una api basada en Flask de Python.  
 El dockerfile esta vez se modifica con las siguientes instrucciones:  
-```docker
+```dockerfile
 FROM python:3.12-alpine3.17
 
 WORKDIR /app
